@@ -1,0 +1,16 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int a, int b) {
+    int answer = 0;
+    
+    string concat1 = to_string(a) + to_string(b);
+    string concat2 = to_string(b) + to_string(a);
+    int first = stoi(concat1);
+    int second = stoi(concat2);
+    answer = (first < second ? second : first);
+    
+    return answer;
+}
